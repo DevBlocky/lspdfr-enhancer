@@ -55,6 +55,7 @@ namespace LSPDFR_Enhancer
         //Player Menu Buttons
         private static UIMenuItem btnPlayerHeal;
         private static UIMenuCheckboxItem cbPlayerInvincible;
+        private static UIMenuCheckboxItem cbNoRagdoll;
         private static UIMenuCheckboxItem cbNeverWanted;
         private static UIMenuListItem wantedLevelList;
         private static UIMenuItem btnCopModel;
@@ -66,6 +67,7 @@ namespace LSPDFR_Enhancer
         private static UIMenuCheckboxItem cbInvincible;
         private static UIMenuListItem directionList;
         private static UIMenuItem btnSpawnVehicle;
+        private static UIMenuItem btnFixVehicle;
 
         //Weapons Menu Buttons
         private static UIMenuListItem weaponsList;
@@ -150,10 +152,12 @@ namespace LSPDFR_Enhancer
             //Player Menu declaring items
             btnPlayerHeal = new UIMenuItem("Heal Player");
             cbPlayerInvincible = new UIMenuCheckboxItem("Invincible", false);
+            cbNoRagdoll = new UIMenuCheckboxItem("No Ragdoll", false);
+            cbNeverWanted = new UIMenuCheckboxItem("Never Wanted", false);
+            wantedLevelList = new UIMenuListItem("Clear Wanted Level", wantedLevel, 0);
             btnCopModel = new UIMenuItem("Set model as cop");
             btnSuicide = new UIMenuItem("Commit Suicide");
-            wantedLevelList = new UIMenuListItem("Clear Wanted Level", wantedLevel, 0);
-            cbNeverWanted = new UIMenuCheckboxItem("Never Wanted", false);
+
 
             //Vehicles Menu declaring items
             modelList = new UIMenuListItem("Model", models, 0);
@@ -161,6 +165,7 @@ namespace LSPDFR_Enhancer
             cbInvincible = new UIMenuCheckboxItem("Invincible", false);
             directionList = new UIMenuListItem("Direction", directions, 0);
             btnSpawnVehicle = new UIMenuItem("Spawn");
+            btnFixVehicle = new UIMenuItem("Fix Vehicle");
 
             //Weapons menu declaring items
             weaponsList = new UIMenuListItem("Weapons", weaponNames, 0);
@@ -201,6 +206,7 @@ namespace LSPDFR_Enhancer
             //Adding and binding stuff to playerMenu
             playerMenu.AddItem(btnPlayerHeal);
             playerMenu.AddItem(cbPlayerInvincible);
+            playerMenu.AddItem(cbNoRagdoll);
             playerMenu.AddItem(cbNeverWanted);
             playerMenu.AddItem(wantedLevelList);
             playerMenu.AddItem(btnCopModel);
@@ -212,6 +218,7 @@ namespace LSPDFR_Enhancer
             vehicleMenu.AddItem(cbInvincible);
             vehicleMenu.AddItem(directionList);
             vehicleMenu.AddItem(btnSpawnVehicle);
+            vehicleMenu.AddItem(btnFixVehicle);
 
             //Adding stuff to weaponMenu
             weaponMenu.AddItem(weaponsList);
@@ -280,7 +287,6 @@ namespace LSPDFR_Enhancer
                     {
                         Game.LocalPlayer.IsInvincible = true;
                     }
-
                     else
                     {
                         Game.LocalPlayer.IsInvincible = false;
@@ -292,10 +298,24 @@ namespace LSPDFR_Enhancer
                         Game.LocalPlayer.WantedLevel = 0;
                     }
 
+                    //Giving player ammo in current weapon
                     if (cbUnlimitedAmmo.Checked == true)
                     {
-                        WeaponDescriptor equipWeapon = Game.LocalPlayer.Character.Inventory.EquippedWeapon;
-                        equipWeapon.Ammo = 9999;
+                       if (Game.LocalPlayer.Character.Inventory.EquippedWeapon != null)
+                        {
+                            WeaponDescriptor equipWeapon = Game.LocalPlayer.Character.Inventory.EquippedWeapon;
+                            equipWeapon.Ammo = 9999;
+                        }
+                    }
+
+                    //Setting if player can Ragdoll or not
+                    if (cbNoRagdoll.Checked == true)
+                    {
+                        Game.LocalPlayer.Character.CanRagdoll = false;
+                    }
+                    else
+                    {
+                        Game.LocalPlayer.Character.CanRagdoll = true;
                     }
                 }
             });
@@ -310,18 +330,6 @@ namespace LSPDFR_Enhancer
                 if (selectedItem == btnExit)
                 {
                     mainMenu.Visible = false;
-                }
-
-                //If Weapons button is pressed, gives notification that it is still in the works
-                if (selectedItem == btnWeapons)
-                {
-                    Game.DisplayNotification("This feature is still in the works hotshot, this is only a beta");
-                }
-
-                //If Environment button is pressed, gives notification that it is still in the works
-                if (selectedItem == btnEnvironment)
-                {
-                    Game.DisplayNotification("This feature is still in the works hotshot, this is only a beta");
                 }
             }
 
@@ -394,6 +402,13 @@ namespace LSPDFR_Enhancer
                     if (warpToVehicle == true)
                     {
                         Game.LocalPlayer.Character.WarpIntoVehicle(spawnedVehicle, -1);
+                    }
+                }
+                if (selectedItem == btnFixVehicle)
+                {
+                    if (Game.LocalPlayer.LastVehicle.Exists())
+                    {
+                        Game.LocalPlayer.LastVehicle.Repair();
                     }
                 }
             }
