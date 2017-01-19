@@ -55,10 +55,10 @@ namespace LSPDFR_Enhancer
         //Player Menu Buttons
         private static UIMenuItem btnPlayerHeal;
         private static UIMenuCheckboxItem cbPlayerInvincible;
+        private static UIMenuCheckboxItem cbNeverWanted;
+        private static UIMenuListItem wantedLevelList;
         private static UIMenuItem btnCopModel;
         private static UIMenuItem btnSuicide;
-        private static UIMenuListItem wantedLevelList;
-        private static UIMenuCheckboxItem cbNeverWanted;
 
         //Vehicles Menu Buttons
         private static UIMenuListItem modelList;
@@ -72,6 +72,7 @@ namespace LSPDFR_Enhancer
         private static UIMenuItem btnSpawnWeapon;
         private static UIMenuItem btnOfficerLoadout;
         private static UIMenuItem btnRefillAmmo;
+        private static UIMenuCheckboxItem cbUnlimitedAmmo;
 
         //Environment Menu Buttons
         private static UIMenuListItem weatherList;
@@ -166,6 +167,7 @@ namespace LSPDFR_Enhancer
             btnSpawnWeapon = new UIMenuItem("Spawn Weapon");
             btnOfficerLoadout = new UIMenuItem("Give Officer Loadout");
             btnRefillAmmo = new UIMenuItem("Refill Equiped Weapon Ammo");
+            cbUnlimitedAmmo = new UIMenuCheckboxItem("Unlimited Ammo", false);
 
             //Environment menu declaring items
             weatherList = new UIMenuListItem("Weather", weather, 0);
@@ -199,8 +201,8 @@ namespace LSPDFR_Enhancer
             //Adding and binding stuff to playerMenu
             playerMenu.AddItem(btnPlayerHeal);
             playerMenu.AddItem(cbPlayerInvincible);
-            playerMenu.AddItem(wantedLevelList);
             playerMenu.AddItem(cbNeverWanted);
+            playerMenu.AddItem(wantedLevelList);
             playerMenu.AddItem(btnCopModel);
             playerMenu.AddItem(btnSuicide);
 
@@ -216,6 +218,7 @@ namespace LSPDFR_Enhancer
             weaponMenu.AddItem(btnSpawnWeapon);
             weaponMenu.AddItem(btnOfficerLoadout);
             weaponMenu.AddItem(btnRefillAmmo);
+            weaponMenu.AddItem(cbUnlimitedAmmo);
 
             //Adding stuff to environmentMenu
             environmentMenu.AddItem(weatherList);
@@ -287,6 +290,12 @@ namespace LSPDFR_Enhancer
                     if (cbNeverWanted.Checked == true)
                     {
                         Game.LocalPlayer.WantedLevel = 0;
+                    }
+
+                    if (cbUnlimitedAmmo.Checked == true)
+                    {
+                        WeaponDescriptor equipWeapon = Game.LocalPlayer.Character.Inventory.EquippedWeapon;
+                        equipWeapon.Ammo = 9999;
                     }
                 }
             });
@@ -394,7 +403,7 @@ namespace LSPDFR_Enhancer
             {
                 if (selectedItem == btnSpawnWeapon)
                 {
-                    string wpnName = weaponsList.IndexToItem(modelList.Index);
+                    string wpnName = weaponsList.IndexToItem(weaponsList.Index);
 
                     if (wpnName == "Pistol") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Pistol, 9999, false); }
                     if (wpnName == "Combat Pistol") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CombatPistol, 9999, false); }
