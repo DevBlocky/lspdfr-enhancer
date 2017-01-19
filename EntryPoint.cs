@@ -57,8 +57,6 @@ namespace LSPDFR_Enhancer
         private static UIMenuCheckboxItem cbPlayerInvincible;
         private static UIMenuItem btnCopModel;
         private static UIMenuItem btnSuicide;
-
-        //Wanted Level Menu Buttons
         private static UIMenuListItem wantedLevelList;
         private static UIMenuCheckboxItem cbNeverWanted;
 
@@ -71,6 +69,7 @@ namespace LSPDFR_Enhancer
 
         //Weapons Menu Buttons
         private static UIMenuListItem weaponsList;
+        private static UIMenuItem btnSpawnWeapon;
         private static UIMenuItem btnOfficerLoadout;
         private static UIMenuItem btnRefillAmmo;
 
@@ -152,8 +151,6 @@ namespace LSPDFR_Enhancer
             cbPlayerInvincible = new UIMenuCheckboxItem("Invincible", false);
             btnCopModel = new UIMenuItem("Set model as cop");
             btnSuicide = new UIMenuItem("Commit Suicide");
-
-            //Wanted level Menu
             wantedLevelList = new UIMenuListItem("Clear Wanted Level", wantedLevel, 0);
             cbNeverWanted = new UIMenuCheckboxItem("Never Wanted", false);
 
@@ -166,8 +163,11 @@ namespace LSPDFR_Enhancer
 
             //Weapons menu declaring items
             weaponsList = new UIMenuListItem("Weapons", weaponNames, 0);
+            btnSpawnWeapon = new UIMenuItem("Spawn Weapon");
             btnOfficerLoadout = new UIMenuItem("Give Officer Loadout");
-            btnRefillAmmo = new UIMenuItem("Refill Ammo");
+            btnRefillAmmo = new UIMenuItem("Refill Equiped Weapon Ammo");
+
+            //Environment menu declaring items
             weatherList = new UIMenuListItem("Weather", weather, 0);
             timeList = new UIMenuListItem("Time", time, 0);
             btnTimeWeatherSet = new UIMenuItem("Set Time and Weather");
@@ -213,6 +213,7 @@ namespace LSPDFR_Enhancer
 
             //Adding stuff to weaponMenu
             weaponMenu.AddItem(weaponsList);
+            weaponMenu.AddItem(btnSpawnWeapon);
             weaponMenu.AddItem(btnOfficerLoadout);
             weaponMenu.AddItem(btnRefillAmmo);
 
@@ -270,7 +271,7 @@ namespace LSPDFR_Enhancer
                     {
                         mainMenu.Visible = false;
                     }
-
+                    
                     //Making player invincible
                     if (cbPlayerInvincible.Checked == true)
                     {
@@ -391,8 +392,33 @@ namespace LSPDFR_Enhancer
             //If button pressed on weaponsMenu
             if (sender == weaponMenu)
             {
-                //This feature is still being developed
-                Game.DisplayNotification("This feature is still in the works");
+                if (selectedItem == btnSpawnWeapon)
+                {
+                    string wpnName = weaponsList.IndexToItem(modelList.Index);
+
+                    if (wpnName == "Pistol") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Pistol, 9999, false); }
+                    if (wpnName == "Combat Pistol") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CombatPistol, 9999, false); }
+                    if (wpnName == "Carbine Assault Rifle") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CarbineRifle, 9999, false); }
+                    if (wpnName == "Shotgun") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.PumpShotgun, 9999, false); }
+                    if (wpnName == "Tazer") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.StunGun, 9999, false); }
+                    if (wpnName == "Flashlight") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Flashlight, 9999, false); }
+                    if (wpnName == "Baton") { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Nightstick, 9999, false); }
+                }
+                if (selectedItem == btnRefillAmmo)
+                {
+                    WeaponDescriptor weapon = Game.LocalPlayer.Character.Inventory.EquippedWeapon;
+                    weapon.Ammo = 9999;
+                }
+                if (selectedItem == btnOfficerLoadout)
+                {
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Pistol, 9999, false); }
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CombatPistol, 9999, false); }
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CarbineRifle, 9999, false); }
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.PumpShotgun, 9999, false); }
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.StunGun, 9999, false); }
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Flashlight, 9999, false); }
+                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Nightstick, 9999, false); }
+                }
             }
 
             //If button pressed on environmentMenu
