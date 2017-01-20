@@ -36,12 +36,89 @@ namespace LSPDFR_Enhancer
             return keyBinding;
         }
         
-        public static string getCarModel()
+        public static string getCarModel1()
         {
             InitializationFile ini = initialiseFile();
 
-            string carModel = ini.ReadString("LISTS", "MODELS");
-            return carModel;
+            string carModel1 = ini.ReadString("MODELS", "MODEL1");
+            return carModel1;
+        }
+        public static string getCarModel2()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel2 = ini.ReadString("MODELS", "MODEL2");
+            return carModel2;
+        }
+        public static string getCarModel3()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel3 = ini.ReadString("MODELS", "MODEL3");
+            return carModel3;
+        }
+        public static string getCarModel4()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel4 = ini.ReadString("MODELS", "MODEL4");
+            return carModel4;
+        }
+        public static string getCarModel5()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel5 = ini.ReadString("MODELS", "MODEL5");
+            return carModel5;
+        }
+        public static string getCarModel6()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel6 = ini.ReadString("MODELS", "MODEL6");
+            return carModel6;
+        }
+        public static string getCarModel7()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel7 = ini.ReadString("MODELS", "MODEL7");
+            return carModel7;
+        }
+        public static string getCarModel8()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel8 = ini.ReadString("MODELS", "MODEL8");
+            return carModel8;
+        }
+        public static string getCarModel9()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel9 = ini.ReadString("MODELS", "MODEL9");
+            return carModel9;
+        }
+        public static string getCarModel10()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel10 = ini.ReadString("MODELS", "MODEL10");
+            return carModel10;
+        }
+        public static string getCarModel11()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel11 = ini.ReadString("MODELS", "MODEL11");
+            return carModel11;
+        }
+        public static string getCarModel12()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel12 = ini.ReadString("MODELS", "MODEL12");
+            return carModel12;
         }
 
 
@@ -119,7 +196,7 @@ namespace LSPDFR_Enhancer
 
             List<dynamic> models = new List<dynamic>
             {
-                getCarModel()
+                getCarModel1(), getCarModel2(), getCarModel3(), getCarModel4(), getCarModel5(), getCarModel6(), getCarModel7(), getCarModel8(), getCarModel9(), getCarModel10(), getCarModel11(), getCarModel12()
             };
             List<dynamic> directions = new List<dynamic>
             {
@@ -131,7 +208,7 @@ namespace LSPDFR_Enhancer
             };
             List<dynamic> weather = new List<dynamic>
             {
-                "Extra Sunny", "Sunny", "Clearing", "Raining", "Thunder", "Foggy", "Smoggy"
+                "Extra Sunny", "Clear", "Cloudy", "Smoggy", "Foggy", "Overcast", "Rain", "Thunder", "Drizzle", "Neutral"
             };
             List<dynamic> time = new List<dynamic>
             {
@@ -431,6 +508,7 @@ namespace LSPDFR_Enhancer
                 }
             }
 
+
             //If button pressed on weaponsMenu
             if (sender == weaponMenu)
             {
@@ -466,8 +544,21 @@ namespace LSPDFR_Enhancer
             //If button pressed on environmentMenu
             if (sender == environmentMenu)
             {
-                //This feature is still being developed
-                Game.DisplayNotification("This feature is still in the works");
+                if (selectedItem == btnTimeWeatherSet)
+                {
+                    string igWeather = weatherList.IndexToItem(weatherList.Index);
+
+                    if (igWeather == "Extra Sunny") {  }
+                    if (igWeather == "Clear") {  }
+                    if (igWeather == "Cloudy") {  }
+                    if (igWeather == "Smoggy") {  }
+                    if (igWeather == "Foggy") {  }
+                    if (igWeather == "Overcast") {  }
+                    if (igWeather == "Rain") {  }
+                    if (igWeather == "Thunder") {  }
+                    if (igWeather == "Drizzle") {  }
+                    if (igWeather == "Neutral") {  }
+                }
             }
         }
     }
