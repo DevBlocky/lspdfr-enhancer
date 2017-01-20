@@ -35,6 +35,14 @@ namespace LSPDFR_Enhancer
             string keyBinding = ini.ReadString("GENERAL", "OpenMenuKey");
             return keyBinding;
         }
+        
+        public static string getCarModel()
+        {
+            InitializationFile ini = initialiseFile();
+
+            string carModel = ini.ReadString("LISTS", "MODELS");
+            return carModel;
+        }
 
 
         //Menus
@@ -58,7 +66,7 @@ namespace LSPDFR_Enhancer
         private static UIMenuCheckboxItem cbNoRagdoll;
         private static UIMenuCheckboxItem cbNeverWanted;
         private static UIMenuListItem wantedLevelList;
-        private static UIMenuItem btnCopModel;
+        private static UIMenuListItem playerModelList;
         private static UIMenuItem btnSuicide;
 
         //Vehicles Menu Buttons
@@ -89,9 +97,9 @@ namespace LSPDFR_Enhancer
         {
             //Successfully loaded stuff
             Game.LogTrivial("LSPDE loaded successfully");
-            Game.LogTrivial("LSPDE version 0.1");
+            Game.LogTrivial("LSPDE version v0.2");
             Game.DisplayNotification("LSPDFR Enhancer successfully loaded");
-            Game.DisplayNotification("LSPDFR Enhancer v0.1 BETA");
+            Game.DisplayNotification("LSPDFR Enhancer v0.2 BETA");
 
 
             //ini Read keybinding to Windows.Forms
@@ -111,7 +119,7 @@ namespace LSPDFR_Enhancer
 
             List<dynamic> models = new List<dynamic>
             {
-                "POLICE", "POLICE2", "POLICE3", "POLICE4", "SHERIFF", "SHERIFF2", "FBI", "FBI2", "POLICEB", "POLICET", "RIOT"
+                getCarModel()
             };
             List<dynamic> directions = new List<dynamic>
             {
@@ -132,6 +140,10 @@ namespace LSPDFR_Enhancer
             List<dynamic> wantedLevel = new List<dynamic>
             {
                 "0", "1", "2", "3", "4", "5"
+            };
+            List<dynamic> playerModel = new List<dynamic>
+            {
+                "Male Sheriff", "Male Police", "Female Police", "Male CHP", "Male Snow Police"
             };
 
             //Declaring menus
@@ -155,7 +167,7 @@ namespace LSPDFR_Enhancer
             cbNoRagdoll = new UIMenuCheckboxItem("No Ragdoll", false);
             cbNeverWanted = new UIMenuCheckboxItem("Never Wanted", false);
             wantedLevelList = new UIMenuListItem("Clear Wanted Level", wantedLevel, 0);
-            btnCopModel = new UIMenuItem("Set model as cop");
+            playerModelList = new UIMenuListItem("Model", playerModel, 0);
             btnSuicide = new UIMenuItem("Commit Suicide");
 
 
@@ -209,7 +221,7 @@ namespace LSPDFR_Enhancer
             playerMenu.AddItem(cbNoRagdoll);
             playerMenu.AddItem(cbNeverWanted);
             playerMenu.AddItem(wantedLevelList);
-            playerMenu.AddItem(btnCopModel);
+            playerMenu.AddItem(playerModelList);
             playerMenu.AddItem(btnSuicide);
 
             //Adding stuff to vehicleMenu
@@ -355,9 +367,15 @@ namespace LSPDFR_Enhancer
                 }
 
                 //If player selected Cop Model, then change to cop ped
-                if (selectedItem == btnCopModel)
+                if (selectedItem == playerModelList)
                 {
-                    Game.LocalPlayer.Model = "s_m_y_cop_01";
+                    string setPlayerModel = playerModelList.IndexToItem(playerModelList.Index);
+
+                    if (setPlayerModel == "Male Sheriff") { Game.LocalPlayer.Model = "csb_cop"; }
+                    if (setPlayerModel == "Male Police") { Game.LocalPlayer.Model = "s_m_y_cop_01"; }
+                    if (setPlayerModel == "Female Police") { Game.LocalPlayer.Model = "s_f_y_cop_01"; }
+                    if (setPlayerModel == "Male CHP") { Game.LocalPlayer.Model = "s_m_y_hwaycop_01"; }
+                    if (setPlayerModel == "Male Snow Police") { Game.LocalPlayer.Model = "s_m_m_snowcop_01"; }
                 }
 
                 //If player selects Suicide, change Kill player
