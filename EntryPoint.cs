@@ -36,92 +36,6 @@ namespace LSPDFR_Enhancer
             return keyBinding;
         }
         
-        public static string getCarModel1()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel1 = ini.ReadString("MODELS", "MODEL1");
-            return carModel1;
-        }
-        public static string getCarModel2()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel2 = ini.ReadString("MODELS", "MODEL2");
-            return carModel2;
-        }
-        public static string getCarModel3()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel3 = ini.ReadString("MODELS", "MODEL3");
-            return carModel3;
-        }
-        public static string getCarModel4()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel4 = ini.ReadString("MODELS", "MODEL4");
-            return carModel4;
-        }
-        public static string getCarModel5()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel5 = ini.ReadString("MODELS", "MODEL5");
-            return carModel5;
-        }
-        public static string getCarModel6()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel6 = ini.ReadString("MODELS", "MODEL6");
-            return carModel6;
-        }
-        public static string getCarModel7()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel7 = ini.ReadString("MODELS", "MODEL7");
-            return carModel7;
-        }
-        public static string getCarModel8()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel8 = ini.ReadString("MODELS", "MODEL8");
-            return carModel8;
-        }
-        public static string getCarModel9()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel9 = ini.ReadString("MODELS", "MODEL9");
-            return carModel9;
-        }
-        public static string getCarModel10()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel10 = ini.ReadString("MODELS", "MODEL10");
-            return carModel10;
-        }
-        public static string getCarModel11()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel11 = ini.ReadString("MODELS", "MODEL11");
-            return carModel11;
-        }
-        public static string getCarModel12()
-        {
-            InitializationFile ini = initialiseFile();
-
-            string carModel12 = ini.ReadString("MODELS", "MODEL12");
-            return carModel12;
-        }
-
-
         //Menus
         private static MenuPool _menuPool;
         private static UIMenu mainMenu;
@@ -196,7 +110,7 @@ namespace LSPDFR_Enhancer
 
             List<dynamic> models = new List<dynamic>
             {
-                getCarModel1(), getCarModel2(), getCarModel3(), getCarModel4(), getCarModel5(), getCarModel6(), getCarModel7(), getCarModel8(), getCarModel9(), getCarModel10(), getCarModel11(), getCarModel12()
+                "POLICE", "POLICE2", "POLICE3", "POLICE4", "SHERIFF", "SHERIFF2", "FBI", "FBI2", "POLICEB", "POLICET", "RIOT"
             };
             List<dynamic> directions = new List<dynamic>
             {
@@ -531,7 +445,6 @@ namespace LSPDFR_Enhancer
                 }
                 if (selectedItem == btnOfficerLoadout)
                 {
-                    if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.Pistol, 9999, false); }
                     if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CombatPistol, 9999, false); }
                     if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.CarbineRifle, 9999, false); }
                     if (true) { Game.LocalPlayer.Character.Inventory.GiveNewWeapon(WeaponHash.PumpShotgun, 9999, false); }
