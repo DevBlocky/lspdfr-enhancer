@@ -194,7 +194,7 @@ namespace LSPDFR_Enhancer
             mainMenu.AddItem(btnPlayer);
             mainMenu.AddItem(btnVehicles);
             mainMenu.AddItem(btnWeapons);
-            mainMenu.AddItem(btnEnvironment);
+            //mainMenu.AddItem(btnEnvironment);
             mainMenu.AddItem(btnExit);
 
             //Binding stuff to mainMenu
