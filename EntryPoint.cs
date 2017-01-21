@@ -7,6 +7,7 @@ using Rage;
 using RAGENativeUI;
 using System.Windows.Forms;
 using RAGENativeUI.Elements;
+using Rage.Native;
 
 [assembly: Rage.Attributes.Plugin("LSPDFR Enhancer", Description = "Enhances LSPDFR", Author = "BlockBa5her", SupportUrl = "Coming soon")]
 namespace LSPDFR_Enhancer
@@ -461,16 +462,16 @@ namespace LSPDFR_Enhancer
                 {
                     string igWeather = weatherList.IndexToItem(weatherList.Index);
 
-                    if (igWeather == "Extra Sunny") {  }
-                    if (igWeather == "Clear") {  }
-                    if (igWeather == "Cloudy") {  }
-                    if (igWeather == "Smoggy") {  }
-                    if (igWeather == "Foggy") {  }
-                    if (igWeather == "Overcast") {  }
-                    if (igWeather == "Rain") {  }
-                    if (igWeather == "Thunder") {  }
-                    if (igWeather == "Drizzle") {  }
-                    if (igWeather == "Neutral") {  }
+                    if (igWeather == "Extra Sunny") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "EXTRASUNNY"); }
+                    if (igWeather == "Clear") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "CLEAR"); }
+                    if (igWeather == "Cloudy") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "CLOUDS"); }
+                    if (igWeather == "Smoggy") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "SMOG"); }
+                    if (igWeather == "Foggy") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "FOGGY"); }
+                    if (igWeather == "Overcast") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "OVERCAST"); }
+                    if (igWeather == "Rain") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "RAIN"); }
+                    if (igWeather == "Thunder") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "THUNDER"); }
+                    if (igWeather == "Drizzle") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "CLEARING"); }
+                    if (igWeather == "Neutral") { NativeFunction.CallByName<uint>("SET_WEATHER_TYPE_NOW", "NEUTRAL"); }
                 }
             }
         }
