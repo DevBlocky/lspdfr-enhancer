@@ -131,7 +131,7 @@ namespace LSPDFR_Enhancer
             };
             List<dynamic> wantedLevel = new List<dynamic>
             {
-                "0", "1", "2", "3", "4", "5"
+                "None", "★", "★★", "★★★", "★★★★", "★★★★★"
             };
             List<dynamic> playerModel = new List<dynamic>
             {
@@ -347,11 +347,14 @@ namespace LSPDFR_Enhancer
                 {
                     //Creating new string to store the index of wantedLevelList
                     string igWantedLevel = wantedLevelList.IndexToItem(wantedLevelList.Index);
-                    //Converting string to integer
-                    int igWantedLevelInt = Convert.ToInt32(igWantedLevel);
-
-                    //Setting in game wanted level
-                    Game.LocalPlayer.WantedLevel = igWantedLevelInt;
+                    
+                    //Detecting and setting wanted level
+                    if (igWantedLevel == "None") { Game.LocalPlayer.WantedLevel = 0; }
+                    if (igWantedLevel == "★") { Game.LocalPlayer.WantedLevel = 1; }
+                    if (igWantedLevel == "★★") { Game.LocalPlayer.WantedLevel = 2; }
+                    if (igWantedLevel == "★★★") { Game.LocalPlayer.WantedLevel = 3; }
+                    if (igWantedLevel == "★★★★") { Game.LocalPlayer.WantedLevel = 4; }
+                    if (igWantedLevel == "★★★★★") {Game.LocalPlayer.WantedLevel = 5; }
                 }
 
                 //If player selected Cop Model, then change to cop ped
