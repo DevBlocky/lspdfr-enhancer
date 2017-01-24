@@ -303,13 +303,10 @@ namespace LSPDFR_Enhancer
                     }
 
                     //Giving player ammo in current weapon
-                    if (cbUnlimitedAmmo.Checked == true)
+                    if (cbUnlimitedAmmo.Checked == true && Game.LocalPlayer.Character.Inventory.EquippedWeapon != null)
                     {
-                       if (Game.LocalPlayer.Character.Inventory.EquippedWeapon != null)
-                        {
-                            WeaponDescriptor equipWeapon = Game.LocalPlayer.Character.Inventory.EquippedWeapon;
-                            equipWeapon.Ammo = 9999;
-                        }
+                        WeaponDescriptor equipWeapon = Game.LocalPlayer.Character.Inventory.EquippedWeapon;
+                        equipWeapon.Ammo = 9999;
                     }
 
                     //Setting if player can Ragdoll or not
@@ -328,13 +325,9 @@ namespace LSPDFR_Enhancer
         public static void OnItemSelect(UIMenu sender, UIMenuItem selectedItem, int index)
         {
             //If button pressed on mainMenu
-            if (sender == mainMenu)
+            if (sender == mainMenu && selectedItem == btnExit)
             {
-                //If Exit button is pressed, then exit make the menu no longer visible
-                if (selectedItem == btnExit)
-                {
-                    mainMenu.Visible = false;
-                }
+                mainMenu.Visible = false;
             }
 
             //If button pressed on playerMenu
