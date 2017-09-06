@@ -1,0 +1,10 @@
+Extra Sunny
+Clear
+Cloudy
+Smoggy
+Foggy
+Overcast
+Rain
+Thunder
+Drizzle
+Neutral

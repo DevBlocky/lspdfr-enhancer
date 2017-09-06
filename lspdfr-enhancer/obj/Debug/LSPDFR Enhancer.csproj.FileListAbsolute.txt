@@ -1,0 +1,65 @@
+F:\Visual studio projects\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+F:\Visual studio projects\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer\bin\Debug\RAGENativeUI.dll
+F:\Visual studio projects\LSPDFR Enhancer\bin\Debug\RagePluginHookSDK.dll
+F:\Visual studio projects\LSPDFR Enhancer\bin\Debug\RAGENativeUI.pdb
+F:\Visual studio projects\LSPDFR Enhancer\bin\Debug\RAGENativeUI.xml
+F:\Visual studio projects\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\bin\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\bin\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\bin\Debug\RAGENativeUI.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\bin\Debug\RagePluginHookSDK.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\bin\Debug\RAGENativeUI.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\bin\Debug\RAGENativeUI.xml
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\obj\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\obj\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\bin\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\bin\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\bin\Debug\RAGENativeUI.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\bin\Debug\RAGENativeUI.xml
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\obj\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.2 DEBUG\obj\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\bin\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\bin\Debug\LSPDFR Enhancer.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\bin\Debug\RAGENativeUI.pdb
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\bin\Debug\RAGENativeUI.xml
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\obj\Debug\LSPDFR Enhancer.dll
+F:\Visual studio projects\LSPDFR Enhancer (RPH Mod)\V0.3 DEBUG\obj\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\RAGENativeUI.pdb
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\RAGENativeUI.xml
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\Visual Studio 2015\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\visual studio 2017\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\visual studio 2017\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\visual studio 2017\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\Bwookzy.Common.dll
+C:\Users\Jacob\Documents\visual studio 2017\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\visual studio 2017\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.pdb
+E:\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.dll
+E:\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\LSPDFR Enhancer.pdb
+E:\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\bin\Debug\Bwookzy.Common.dll
+E:\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+E:\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.dll
+E:\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\visual studio 2017\Projects\!GTA Projects\Serious Plugins\LSPDFR Enhancer\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\bin\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\bin\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\bin\Debug\RAGENativeUI.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\bin\Debug\RagePluginHookSDK.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\obj\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\obj\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\bin\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\bin\Debug\LSPDFR Enhancer.pdb
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\bin\Debug\RAGENativeUI.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\bin\Debug\RagePluginHookSDK.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\obj\Debug\LSPDFR Enhancer.csprojResolveAssemblyReference.cache
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\obj\Debug\LSPDFR Enhancer.dll
+C:\Users\Jacob\Documents\Visual Studio 2017\Projects\!repos\lspdfr-enhancer\lspdfr-enhancer\obj\Debug\LSPDFR Enhancer.pdb

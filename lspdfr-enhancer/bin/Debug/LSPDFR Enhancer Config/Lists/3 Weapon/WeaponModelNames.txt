@@ -1,0 +1,7 @@
+Pistol
+Combat Pistol
+Carbine Assault Rifle
+Shotgun
+Tazer
+Flashlight
+Baton
